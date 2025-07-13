@@ -1,7 +1,8 @@
 ---
-import Header from "../components/Header.astro"
-import Footer from "../components/Footer.astro"
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 ---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -11,11 +12,18 @@ import Footer from "../components/Footer.astro"
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
 		<link rel="stylesheet" href="/src/styles/global.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 	<body>
 		<Header />
-		<slot />
-		<main></main>
+		<main class="bg-gray-50">
+			<slot />
+		</main>
 		<Footer />
 	</body>
 </html>
