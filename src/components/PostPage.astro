@@ -29,12 +29,12 @@ const date = new Date(post.date_created).toLocaleDateString("en-US", {
 				}
 			</div>
 			<p
-				class="text-gray-500 border-t-1 border-b-1 border-gray-300 py-2 mb-2"
+				class="font-sans text-gray-500 border-t-1 border-b-1 border-gray-300 py-2 mb-2"
 			>
 				{date}
 			</p>
 			<div
-				class="text-gray-800 text-lg font-light prose prose-slate max-w-none"
+				class="font-sans text-gray-800 text-lg prose prose-slate max-w-none"
 				set:html={post.body}
 			/>
 		</div>
