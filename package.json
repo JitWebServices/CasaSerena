@@ -1,5 +1,5 @@
 {
-  "name": "maisonserene-astro",
+  "name": "tempastro",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -9,8 +9,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/tailwind": "^6.0.2",
+    "@directus/sdk": "^20.0.0",
+    "@tailwindcss/vite": "^4.1.11",
     "astro": "^5.11.0",
-    "tailwindcss": "^3.4.17"
+    "tailwindcss": "^4.1.11"
   }
 }

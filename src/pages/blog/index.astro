@@ -1,0 +1,23 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import directus from "../../../lib/directus";
+import { readItems } from "@directus/sdk";
+
+const posts = await directus.request(
+    readItems("posts", {
+        fields: ["slug", "title", "date_created", "user_created"],
+        sort: ["-date_created"],
+        filter: {
+            site: {
+                _eq: "marcos_vega",
+            },
+        },
+    }),
+);
+---
+
+<Layout title="Blog">
+    <div>
+        {posts.map((post) => <a href={`/blog/${post.slug}`}>{post.title}</a>)}
+    </div>
+</Layout>
