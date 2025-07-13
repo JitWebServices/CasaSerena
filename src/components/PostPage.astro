@@ -34,7 +34,7 @@ const date = new Date(post.date_created).toLocaleDateString("en-US", {
 				{date}
 			</p>
 			<div
-				class="text-gray-800 text-lg font-light"
+				class="text-gray-800 text-lg font-light prose prose-slate max-w-none"
 				set:html={post.body}
 			/>
 		</div>

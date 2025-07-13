@@ -13,7 +13,7 @@ const currentPath = Astro.url.pathname;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Maison Serene | Financial Service</title>
 		<link rel="stylesheet" href="/src/styles/global.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,7 +23,6 @@ const currentPath = Astro.url.pathname;
 		/>
 	</head>
 	<body class="min-h-screen justify-between flex flex-col">
-		{/* Pass currentPath as a prop */}
 		<Header currentPath={currentPath} />
 		<main class="bg-gray-100 flex-1 flex">
 			<slot />
