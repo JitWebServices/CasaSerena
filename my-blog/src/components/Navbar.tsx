@@ -1,67 +1,66 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React from 'react'
+import { Link, useLocation } from 'react-router-dom'
 
 const Navbar: React.FC = () => {
-  const location = useLocation();
-  
-  const isActive = (path: string) => {
-    return location.pathname === path;
-  };
+  const location = useLocation()
+  const isActive = (path: string) => location.pathname === path
 
   return (
-    <nav className="bg-white shadow-lg">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center h-16">
-          <Link to="/" className="text-xl font-bold text-gray-800">
-            My Blog
-          </Link>
-          
-          <div className="flex space-x-8">
+    <nav className="bg-[#003153]">
+      <div className="max-w-5xl mx-auto px-4">
+        <ul className="flex justify-center space-x-12 py-4">
+          <li>
             <Link
               to="/"
-              className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+              className={`transition-colors ${
                 isActive('/') 
-                  ? 'bg-blue-500 text-white' 
-                  : 'text-gray-700 hover:bg-gray-100'
+                  ? 'text-yellow-300 font-medium' 
+                  : 'text-white hover:text-yellow-300'
               }`}
             >
               Home
             </Link>
+          </li>
+          <li>
+            <Link
+              to="/work"
+              className={`transition-colors ${
+                isActive('/work') 
+                  ? 'text-yellow-300 font-medium' 
+                  : 'text-white hover:text-yellow-300'
+              }`}
+            >
+              Work with me
+            </Link>
+          </li>
+          <li>
             <Link
               to="/blog"
-              className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+              className={`transition-colors ${
                 isActive('/blog') 
-                  ? 'bg-blue-500 text-white' 
-                  : 'text-gray-700 hover:bg-gray-100'
+                  ? 'text-yellow-300 font-medium' 
+                  : 'text-white hover:text-yellow-300'
               }`}
             >
               Blog
             </Link>
-            <Link
-              to="/calculators"
-              className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                isActive('/calculators') 
-                  ? 'bg-blue-500 text-white' 
-                  : 'text-gray-700 hover:bg-gray-100'
-              }`}
-            >
-              Calculators
-            </Link>
+          </li>
+          <li>
             <Link
               to="/about"
-              className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+              className={`transition-colors ${
                 isActive('/about') 
-                  ? 'bg-blue-500 text-white' 
-                  : 'text-gray-700 hover:bg-gray-100'
+                  ? 'text-yellow-300 font-medium' 
+                  : 'text-white hover:text-yellow-300'
               }`}
             >
               About
             </Link>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
