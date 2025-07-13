@@ -25,7 +25,7 @@ const currentPath = Astro.url.pathname;
 	<body class="min-h-screen justify-between flex flex-col">
 		{/* Pass currentPath as a prop */}
 		<Header currentPath={currentPath} />
-		<main class="bg-gray-50 flex-1">
+		<main class="bg-gray-100 flex-1 flex">
 			<slot />
 		</main>
 		<Footer />
