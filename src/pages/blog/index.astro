@@ -2,10 +2,11 @@
 import Layout from "../../layouts/Layout.astro";
 import directus from "../../../lib/directus";
 import { readItems } from "@directus/sdk";
+import PostCard from "../../components/PostCard.astro";
 
 const posts = await directus.request(
     readItems("posts", {
-        fields: ["slug", "title", "date_created", "user_created"],
+        fields: ["slug", "title", "date_created", "user_created", "status", "body", "tags", "site", "short_body"],
         sort: ["-date_created"],
         filter: {
             site: {
@@ -17,7 +18,7 @@ const posts = await directus.request(
 ---
 
 <Layout title="Blog">
-    <div>
-        {posts.map((post) => <a href={`/blog/${post.slug}`}>{post.title}</a>)}
+    <div class="max-w-screen-xl mx-auto py-10 flex flex-col gap-6">
+        {posts.map((post) => <PostCard post={post} />)}
     </div>
 </Layout>

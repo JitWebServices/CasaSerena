@@ -7,8 +7,9 @@ export type Post = {
     status: string;
     body: string;
     slug: string;
-    tags: string;
+    tags: string[];
     site: string;
+    short_body: string;
 }
 
 

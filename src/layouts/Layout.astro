@@ -1,6 +1,9 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+
+// Get the current URL path from Astro's built-in `Astro.url`
+const currentPath = Astro.url.pathname;
 ---
 
 <!doctype html>
@@ -20,7 +23,8 @@ import Footer from "../components/Footer.astro";
 		/>
 	</head>
 	<body class="min-h-screen justify-between flex flex-col">
-		<Header />
+		{/* Pass currentPath as a prop */}
+		<Header currentPath={currentPath} />
 		<main class="bg-gray-50 flex-1">
 			<slot />
 		</main>
