@@ -11,7 +11,7 @@ const isActive = (href: string) => normalize(currentPath) === normalize(href);
 			<h1
 				class="text-slate-900 text-center font-medium font-serif text-9xl"
 			>
-				Casa Serene
+				Casa Serena
 			</h1>
 			<h2
 				class="p-2 font-serif uppercase font-light text-4xl text-slate-700"
@@ -29,26 +29,27 @@ const isActive = (href: string) => normalize(currentPath) === normalize(href);
 			>
 
 			<a
-				href="/work"
-				class={`text-2xl p-6 hover:bg-slate-900 ${isActive("/work") ? "bg-slate-900 text-yellow-400 border-b-3 border-yellow-400" : "text-white"}`}
-				>Work with me</a
-			>
-
-			<a
 				href="/blog"
 				class={`text-2xl p-6 hover:bg-slate-900 ${isActive("/blog") ? "bg-slate-900 text-yellow-400 border-b-3 border-yellow-400" : "text-white"}`}
 				>Blog</a
 			>
 
 			<a
+				href="/calculators"
+				class={`text-2xl p-6 hover:bg-slate-900 ${isActive("/calculators") ? "bg-slate-900 text-yellow-400 border-b-3 border-yellow-400" : "text-white"}`}
+				>Calculators</a
+			>
+
+			<a
+				href="/work"
+				class={`text-2xl p-6 hover:bg-slate-900 ${isActive("/work") ? "bg-slate-900 text-yellow-400 border-b-3 border-yellow-400" : "text-white"}`}
+				>Work with Me</a
+			>
+
+			<a
 				href="/about"
 				class={`text-2xl p-6 hover:bg-slate-900 ${isActive("/about") ? "bg-slate-900 text-yellow-400 border-b-3 border-yellow-400" : "text-white"}`}
 				>About</a
-			>
-			<a
-				href="/calculator"
-				class={`text-2xl p-6 hover:bg-slate-900 ${isActive("/calculator") ? "bg-slate-900 text-yellow-400 border-b-3 border-yellow-400" : "text-white"}`}
-				>Calculator</a
 			>
 		</div>
 	</div>
