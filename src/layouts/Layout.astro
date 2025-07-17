@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import "../styles/global.css"
 
 // Get the current URL path from Astro's built-in `Astro.url`
 const currentPath = Astro.url.pathname;
@@ -14,7 +15,6 @@ const currentPath = Astro.url.pathname;
 		<link rel="icon" type="image/png" href="/src/assets/casa-serene-favicon.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Casa Serene | Financial Service</title>
-		<link rel="stylesheet" href="/src/styles/global.css" />
 	
 	</head>
 	<body class="min-h-screen justify-between flex flex-col">
